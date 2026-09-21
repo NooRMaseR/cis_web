@@ -42,7 +42,7 @@ async def get_sessions(payload: StudentDataRequest) -> list[StudentSubjectSerial
     ).order_by('time_start')
     
     # 3. Group the rows by Subject
-    subject_map = defaultdict[tuple[str,str], list[SessionInfo]](list)
+    subject_map: dict[tuple[str,str], list[SessionInfo]] = defaultdict(list)
     
     async for enrollment in enrollments_qs:
         session = SessionInfo(

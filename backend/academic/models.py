@@ -30,7 +30,7 @@ class StaffMember(models.Model):
 class Subject(models.Model):
     code = models.CharField(max_length=20, unique=True)
     name = models.CharField(max_length=255)
-    department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='subjects')
+    department = models.ForeignKey(Department, on_delete=models.DB_CASCADE, related_name='subjects')
 
     def __str__(self) -> str:
         return f"{self.name} ({self.code})"

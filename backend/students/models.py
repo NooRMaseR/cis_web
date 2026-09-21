@@ -37,8 +37,8 @@ class Student(models.Model):
         return f"{self.name} ({self.student_code})"
 
 class StudentSubject(models.Model):
-    student = models.ForeignKey(Student, models.CASCADE)
-    subject = models.ForeignKey(Subject, models.CASCADE)
+    student = models.ForeignKey(Student, models.DB_CASCADE)
+    subject = models.ForeignKey(Subject, models.DB_CASCADE)
     group_num = models.PositiveSmallIntegerField(help_text="رقم المجموعه", null=True, blank=True)
     session_type = models.CharField(max_length=7, choices=SessionType)
     day = models.CharField(max_length=20, choices=SessionDays)

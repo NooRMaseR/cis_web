@@ -1,10 +1,10 @@
 from django_bolt.serializers import Serializer
 
-class DepartmentSerializer(Serializer):
+class DepartmentSerializer(Serializer, gc=False):
     id: int
     name: str
 
-class StaffSerializer(Serializer):
+class StaffSerializer(Serializer, gc=False):
     id: int
     name: str
     department: DepartmentSerializer

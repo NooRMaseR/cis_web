@@ -5,12 +5,12 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "django>=6.0.7",
-    "django-bolt>=0.9.0",
-    "django-imagekit>=6.1.0",
-    "django-redis[hiredis]>=7.0.0",
-    "django-unfold>=0.101.0",
-    "nh3>=0.3.6",
-    "psycopg[binary,pool]>=3.3.4",
-    "python-dotenv>=1.2.2",
+    "django>=6.1.1",
+    "django-bolt==0.12.0-rc1",
+    "django-imagekit>=6.1.1",
+    "django-unfold>=0.107.0",
+    "django-vcache>=3.2.0",
+    "nh3>=0.3.7",
+    "psycopg[binary,pool]>=3.3.6",
+    "python-dotenv>=1.2.3",
 ]

@@ -96,11 +96,11 @@ DATABASES = {
         "CONN_MAX_AGE": 0,
         "OPTIONS": {
             "pool": {
-                "min_size": 2,          # Minimum number of connection slots to keep ready
-                "max_size": 10,         # Maximum number of connections allowed in this pool
-                "max_idle": 10,         # Seconds a connection can remain idle before being closed
-                "max_lifetime": 20,     # Seconds before a connection is dropped and recreated
-                "timeout": 30,          # Seconds to wait for a connection slot before raising an error
+                "min_size": 2,
+                "max_size": 10,
+                "max_idle": 10,
+                "max_lifetime": 20,
+                "timeout": 30,
             },
         },
     }
@@ -108,7 +108,7 @@ DATABASES = {
 
 CACHES = {
     'default': {
-        "BACKEND": "django_redis.cache.RedisCache",
+        "BACKEND": "django_vcache.backend.ValkeyCache",
         "LOCATION": "redis://redis:6379/1",
     }
 }
